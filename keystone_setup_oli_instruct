@@ -1,0 +1,21 @@
+npm cache clean
+npm install yo
+
+
+install -g yo
+sudo npm install -g generator-keystone
+brew update
+brew install mongodb
+
+mkdir -p /data/db (chown)
+
+mongod, then open new tab and node keystone!
+
+
+
+Create new section:
+
+1. add view template: clone templates/views/index.js > new_page.jade (holds markup in Jade)
+2. add view route: clone routes/views/index.js > new_page.js (adds route for this view)
+3. add route to index.js: app.all('/new_page', routes.views.new_page)
+4. add links to nav (found in middleware)
